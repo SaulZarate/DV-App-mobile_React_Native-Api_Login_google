@@ -30,7 +30,6 @@ Profit 😃
 
 ### Documentación
 
-[Doc. oficial de Expo](https://docs.expo.io/versions/latest/sdk/google/)
-
-[Tutorial A](https://dev.to/harleypadua/google-authentication-with-expo-and-react-native-2l24)
+[Doc. oficial de Expo](https://docs.expo.io/versions/latest/sdk/google/)<br>
+[Tutorial A](https://dev.to/harleypadua/google-authentication-with-expo-and-react-native-2l24)<br>
 [Tutorial B](https://blog.expo.io/google-sign-in-with-react-native-and-expo-9cac6c392f0e)
