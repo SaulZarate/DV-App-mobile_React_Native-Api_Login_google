@@ -1,34 +1,39 @@
 import React, {Component} from 'react';
 
+// Componentes para el Drawer
+import { NavigationContainer } from '@react-navigation/native';
+import { DrawerCustomNavigator } from './Navigators/DrawerCustomNavigator.js';
+
+// Mis componentes
 import LoginScreen from "./Screens/LoginScreen";
-import MainScreen from "./Screens/MainScreen";
 
 export default class App extends Component{
 
     constructor(props){
         super(props);
-        // CAMBIAR AL FINAL A FALSE
-        this.state = {isLoggedIn:true}
+        this.state = {isLoggedIn:true} // Cambiar a false para el login
     }
 
     setLogin(){
         this.setState({isLoggedIn:true});
     }
-
     setLogout(){
-        this.setState({isLoggedIn:false});
+        console.log('Logout del App.js')
+        //this.setState({isLoggedIn:false});
     }
 
     render(){
 
-        let screen;
         if(this.state.isLoggedIn){
-            screen = <MainScreen onLogout={() => this.setLogout()}/>
+            return (
+                <NavigationContainer>
+                    <DrawerCustomNavigator onLogout={() => this.setLogout()} />
+                </NavigationContainer>
+            );
         } else {
-            screen = <LoginScreen onLogin={() => this.setLogin()}/>
+            return (<LoginScreen onLogin={() => this.setLogin()}/>);
+            
         }
-
-        return screen;
 
     }
 
