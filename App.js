@@ -11,15 +11,15 @@ export default class App extends Component{
 
     constructor(props){
         super(props);
-        this.state = {isLoggedIn:true} // Cambiar a false para el login
+        this.state = {isLoggedIn:false} // Cambiar a false para el login
     }
 
     setLogin(){
         this.setState({isLoggedIn:true});
     }
     setLogout(){
-        console.log('Logout del App.js')
-        //this.setState({isLoggedIn:false});
+        //console.log('Logout del App.js')
+        this.setState({isLoggedIn:false});
     }
 
     render(){

@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
-import { StyleSheet, Text, View , Image} from 'react-native';
+import { StyleSheet, Text, View , Image, Alert} from 'react-native';
 import { Button  } from 'react-native-elements'
 
 // Imagen
@@ -24,8 +24,8 @@ export class HomeScreen extends Component {
     }
 
     handlerBuscador(){
+        Alert.alert('Estamos buscando los datos')
         getDatosApi().then(response=>response.data).then(datos=>{
-            alert('Estamos buscando los datos')
             this.setState({
                 datosApiFlag: true,
                 paises: datos.Countries,

@@ -5,10 +5,17 @@ import { Icon } from 'react-native-elements'
 
 export class DrawerContentScreen extends Component {
 
+    constructor(props){
+        super(props)
+
+        this.handlerLogout = this.handlerLogout.bind(this)
+        //console.log(this.props)
+    }
 
     handlerLogout(){
-        console.log('boton logout')
-        // this.props.onLogout()
+        //console.log('boton logout')
+        //console.log(this.props)
+        this.props.onLogout()
     }
 
     render(){
